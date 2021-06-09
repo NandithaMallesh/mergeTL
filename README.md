@@ -8,13 +8,11 @@ Step 2: Generate SOMs
 
 Step 3: Train CNN models for each data set
 
-
 ### overview
 * Train a base model using the base data set. 
 * For each target data set, 2 models are generated: 
 	1) standalone model (no transfer learning)
 	2) model with transfer learning (Initilaized with weights from base model)
-
 
 ### System Requirements
 The SOM generation and classification both require tensorflow, a recent NVIDIA GPU is preferable. The system has been internally used using a P40 GPU.
@@ -29,7 +27,6 @@ Other dependencies: Tensforflow=1.12, python=3.6. All dependencies can be instal
 $ pip install /path/to/wheel
 ```
 We suggest using a specific python environment to avoid collisions with other versions of the same python libraries.
-
 
 ### Set up
 1) Download all data sets: <<doi>>
@@ -46,10 +43,14 @@ We suggest using a specific python environment to avoid collisions with other ve
 	4) Erlangen panel
 
 ### Scripts
-1) **generate_ref_som.py:** generate reference SOM for merged base dataset(MLL9F). We will use this reference SOM for generating individual SOMs for each dataset.
-2) **merged_model.py:** train standalone model for the merged data
-3) **merge_TL.py:** train target models with knowledge transfer from the given base model. create target model, set weights from the base model.
-
+1) **mergeTL:**
+	1) **generate_ref_som.py:** generate reference SOM for merged base dataset(MLL9F). We will use this reference SOM for generating individual SOMs for each  dataset.
+	2) **merged_model.py:** train standalone model for the merged data
+	3) **merge_TL.py:** train target models with knowledge transfer from the given base model. create target model, set weights from the base model.
+2) **kold:** scripts to generate k-fold results for each data set
+3) **figures:** scripts to generate all the figures included in the publication
+4) **experiments:** sripts for learning curve experiments
+	
 ### Usage
 1) Generate reference SOM for the merged base data. Ensure the input and output paths match your set up in "generate_ref_som.py".
 ```
@@ -88,7 +89,7 @@ We suggest using a specific python environment to avoid collisions with other ve
 	
 	$TARGET_SOM_PATH : path to merged SOM files of each target data set
 	$OUTPUT: Out put folder path to save model and meta information
-	$BASEMODEL_PATH: path where the base model is saved ( parent folfer containing the model.h5 file)
+	$BASEMODEL_PATH: path where the base model is saved (parent folder containing the model.h5 file)
 	$PANEL: one of the following
 		* MLL, Berlin, Bonn, Erlangen
 ```
@@ -101,7 +102,7 @@ We suggest using a specific python environment to avoid collisions with other ve
 	
 	$TARGET_SOM_PATH : path to merged SOM files of each target data set
 	$OUTPUT: Out put folder path to save model and meta information
-	$BASEMODEL_PATH: path where the base model is saved ( parent folfer containing the model.h5 file)
+	$BASEMODEL_PATH: path where the base model is saved (parent folder containing the model.h5 file)
 	$PANEL: one of the following
 		* MLL, Berlin, Bonn, Erlangen
 ```
