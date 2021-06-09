@@ -29,7 +29,7 @@ $ pip install /path/to/wheel
 We suggest using a specific python environment to avoid collisions with other versions of the same python libraries.
 
 ### Set up
-1) Download all data sets: <<doi>>
+1) Download all data sets: https://doi.org/10.7910/DVN/CQHHEH
 2) clone https://github.com/NandithaMallesh/fcsmerge.git and merge FCS files for each of the data sets
 3) clone and install flowcat from: https://github.com/xiamaz/flowCat.git
 4) clone this repository
@@ -81,7 +81,7 @@ We suggest using a specific python environment to avoid collisions with other ve
 
  ```
 	
-4) Train models with transfer learning for each target data set
+4) Train standalone models for each target data set
 ```
 	./merged_model.py "$TARGET_SOM_PATH" "$OUTPUT" "$PANEL" 
 	
