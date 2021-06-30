@@ -2,6 +2,9 @@
 Workflow to extend AI model trained on a specific MFC panel to multiple data sets.
 
 ### Worflow
+
+![Workflow](https://user-images.githubusercontent.com/22116058/123971644-85fc9700-d9ba-11eb-9b88-910c88e45982.png)
+
 Step 1: Merge FCS files for each of the data set
 
 Step 2: Generate SOMs
