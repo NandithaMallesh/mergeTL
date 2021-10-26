@@ -101,7 +101,7 @@ We suggest using a specific python environment to avoid collisions with other ve
 ```
 	./merge_TL.py "$TARGET_SOM_PATH" "$OUTPUT" "$PANEL" "$BASEMODEL_PATH"
 	
-  e.g.: ./merge_TL.py "/data/SOM/MLL5F/" "/data/models/target/standalone/MLL5F" "MLL" "/data/models/base/MLL9F"
+  e.g.: ./merge_TL.py "/data/SOM/MLL5F/" "/data/models/target/TL/MLL5F" "MLL" "/data/models/base/MLL9F"
 	
 	$TARGET_SOM_PATH : path to merged SOM files of each target data set
 	$OUTPUT: Out put folder path to save model and meta information
